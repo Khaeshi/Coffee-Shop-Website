@@ -12,6 +12,20 @@ import {
 } from "../components/ui/dialog";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
+import emailjs from '@emailjs/browser'; // Import EmailJS
+import { useRef } from "react";
+
+interface EmailJSConfig {
+  serviceId: string;
+  templateId: string;
+  publicKey: string;
+}
+
+const emailJSConfig: EmailJSConfig = {
+  serviceId: import.meta.env.VITE_YOUR_SERVICE_ID || '',
+  templateId: import.meta.env.VITE_YOUR_TEMPLATE_ID || '',
+  publicKey: import.meta.env.VITE_YOUR_PUBLIC_KEY || '',
+};
 
 export function ContactUs() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -22,15 +36,35 @@ export function ContactUs() {
     message: "",
   });
 
+  const form = useRef<HTMLFormElement>(null);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowSuccessModal(true);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+
+    const { serviceId, templateId, publicKey } = emailJSConfig;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS configuration is incomplete. Check your environment variables.");
+      alert("Failed to send message. Please configure EmailJS.");
+      return;
+    }
+
+    if (form.current) {
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        .then((result) => {
+          console.log(result.text);
+          setShowSuccessModal(true);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        }, (error) => {
+          console.log(error.text);
+          alert('Failed to send message. Please try again later.'); // Basic error handling
+        });
+    }
   };
 
   const handleChange = (
@@ -48,7 +82,7 @@ export function ContactUs() {
         <div className="text-center mb-12">
           <h1 className="mb-6 text-[#d4a574] drop-shadow-[0_0_10px_rgba(212,165,116,0.3)]">Contact Us</h1>
           <p className="text-lg text-[#a89379] max-w-3xl mx-auto">
-            We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, 
+            We'd love to hear from you! Whether you have a question, feedback, or just want to say hello,
             feel free to reach out.
           </p>
         </div>
@@ -67,7 +101,7 @@ export function ContactUs() {
                     <div>
                       <h3 className="text-[#d4a574] mb-2">Visit Us</h3>
                       <p className="text-[#a89379]">
-                      1849, Brgy. Dita,<br /> City of Sta. Rosa, Laguna, Philippines
+                        1849, Brgy. Dita,<br /> City of Sta. Rosa, Laguna, Philippines
                       </p>
                     </div>
                   </div>
@@ -96,7 +130,7 @@ export function ContactUs() {
                     </div>
                     <div>
                       <h3 className="text-[#d4a574] mb-2">Email Us</h3>
-                      <p className="text-[#a89379]">hello@gwampitscoffee.com</p>
+                      <p className="text-[#a89379]">gwampitsco@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>
@@ -126,7 +160,7 @@ export function ContactUs() {
             <Card className="bg-gradient-to-br from-[#1a1410] to-[#2d2419] border-[#d4a574]/30 hover:border-[#d4a574] shadow-lg hover:shadow-[0_0_30px_rgba(212,165,116,0.3)] transition-all duration-300">
               <CardContent className="p-6">
                 <h2 className="mb-6 text-[#d4a574]">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form ref={form} onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name" className="text-[#d4a574]">Name *</Label>
                     <Input
@@ -196,7 +230,7 @@ export function ContactUs() {
           <DialogHeader>
             <DialogTitle className="text-[#d4a574]">Message Sent Successfully!</DialogTitle>
             <DialogDescription className="text-[#a89379]">
-              Thank you for contacting Gwampit's Coffee. We've received your message and 
+              Thank you for contacting Gwampit's Coffee. We've received your message and
               will get back to you as soon as possible.
             </DialogDescription>
           </DialogHeader>

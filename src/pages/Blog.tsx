@@ -1,7 +1,7 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Play, Calendar } from "lucide-react";
-import frenchFriesBanner from "figma:asset/a7aa346b60e0a79a4dd7f9c0f18a9652544dd1ee.png";
+import frenchFriesBanner from "../assets/AdvertisementBanner.jpeg";
 import React from "react";
 
 const videoAds = [

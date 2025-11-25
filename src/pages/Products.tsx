@@ -1,7 +1,10 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import greenDrink from "figma:asset/cc432416dcbdcb774559bf4207f805ff0bc27f4a.png";
+import greenDrink from "../assets/GreenDrink.png";
+import redDrink from "../assets/RedDrink.jpeg"
+import blueDrink from "../assets/BlueDrink.jpeg"
+import coffeeDrink from "../assets/coffee.jpeg"
 import { Coffee, Droplet } from "lucide-react";
 import React from "react";
 
@@ -88,6 +91,30 @@ const beverageProducts = [
     price: "$4.50",
     category: "Beverage",
     image: greenDrink,
+    popular: true,
+  },
+  {
+    name: "Signature Blue Lime Refresher",
+    description: "Our famous Lime beverage with a refreshing citrus twist",
+    price: "$4.50",
+    category: "Beverage",
+    image: blueDrink,
+    popular: true,
+  },
+  {
+    name: "Signature Strawbery Red",
+    description: "Our famous Strawbery beverage with a refreshing citrus twist",
+    price: "$4.50",
+    category: "Beverage",
+    image: redDrink,
+    popular: true,
+  },
+  {
+    name: "Barista Coffee",
+    description: "Our famous green beverage with a refreshing citrus twist",
+    price: "$4.50",
+    category: "Beverage",
+    image: coffeeDrink,
     popular: true,
   },
   {
