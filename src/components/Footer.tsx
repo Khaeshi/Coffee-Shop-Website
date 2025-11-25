@@ -10,8 +10,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="group">
             <img src={logo} alt="Gwampit's Coffee" className="h-20 w-20 mb-4 bg-[#2d2419] rounded-full p-2 shadow-[0_0_30px_rgba(212,165,116,0.3)] group-hover:shadow-[0_0_40px_rgba(212,165,116,0.5)] transition-all duration-300" />
+            <h2>Built for the Rush. Powered by Our Best.</h2>
             <p className="text-[#a89379]">
-              Brewing excellence since 2024. Experience the finest coffee crafted with passion and dedication.
+              Brewing excellence since 2025. Experience the finest coffee crafted with passion and dedication.
             </p>
           </div>
 
@@ -37,7 +38,7 @@ export function Footer() {
             <h3 className="mb-4 text-[#d4a574]">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61556107491462"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#2d2419] p-3 rounded-full hover:bg-[#d4a574] hover:text-[#0f0a05] transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(212,165,116,0.5)] hover:scale-110"

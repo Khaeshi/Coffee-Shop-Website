@@ -2,12 +2,12 @@ import { Link } from "react-router";
 import { Coffee, Target, Eye, Award, Facebook } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import logo from "../assets/Favicon.png";
-import greenDrink from "../assets/GreenDrink.png";
+import { DrinkShake } from "../components/DrinkShake"
 import frenchFriesBanner from "../assets/AdvertisementBanner.jpeg";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-
 import React from "react";
+
 
 export function Home() {
   return (
@@ -38,7 +38,8 @@ export function Home() {
             </div>
           </div>
           <div className="flex justify-center">
-            <img src={greenDrink} alt="Signature Drink" className="max-w-md w-full rounded-lg shadow-[0_0_50px_rgba(212,165,116,0.3)] hover:shadow-[0_0_80px_rgba(212,165,116,0.5)] transition-all duration-500 hover:scale-105" />
+            {/* Replace greenDrink img with DrinkShake component */}
+            <DrinkShake />
           </div>
         </div>
       </section>
@@ -115,7 +116,6 @@ export function Home() {
                 width="100%"
                 height="400"
                 style={{ border: 0, borderRadius: '8px' }}
-                allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Gwampit's Coffee Location"
@@ -140,7 +140,7 @@ export function Home() {
               <Facebook size={28} />
             </a>
             <a
-              href="https://twitter.com/gwampitscoffee"
+              href="https://www.tiktok.com/search?q=%40gwampits.coffee&t=1764065544711"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-br from-[#d4a574] to-[#c49060] text-[#0f0a05] p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(212,165,116,0.4)] hover:shadow-[0_0_30px_rgba(212,165,116,0.6)]"

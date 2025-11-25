@@ -2,6 +2,7 @@ import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Play, Calendar } from "lucide-react";
 import frenchFriesBanner from "../assets/AdvertisementBanner.jpeg";
+import Video from '../assets/videoads.mp4'
 import React from "react";
 
 const videoAds = [
@@ -119,11 +120,19 @@ export function Blog() {
           <Card className="bg-gradient-to-br from-[#1a1410] to-[#2d2419] border-[#d4a574]/30 hover:border-[#d4a574] shadow-lg hover:shadow-[0_0_40px_rgba(212,165,116,0.3)] transition-all duration-500">
             <CardContent className="p-6">
               <h2 className="text-[#d4a574] mb-6 text-center">Featured Video</h2>
-              <div className="aspect-video bg-gradient-to-br from-[#2d2419] to-[#1a1410] rounded-lg flex items-center justify-center border border-[#d4a574]/20 hover:border-[#d4a574]/40 transition-all duration-300 group">
-                <div className="text-center text-[#d4a574]">
-                  <Play size={64} className="mx-auto mb-4 drop-shadow-[0_0_15px_rgba(212,165,116,0.5)] group-hover:scale-110 transition-transform duration-300" />
-                  <p>Video player placeholder</p>
-                  <p className="text-sm text-[#a89379]">Embed your promotional videos here</p>
+              <div className="aspect-video bg-gradient-to-br from-[#2d2419] to-[#1a1410] rounded-lg flex items-center justify-center border border-[#d4a574]/20 hover:border-[#d4a574]/40 transition-all duration-300 group relative">
+                {/* Video element - now fills the container */}
+                <video 
+                  className="w-full h-[70vh] object-cover rounded-lg" 
+                  controls
+                >
+                  <source src={Video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Optional: Play icon as overlay (remove if not needed) */}
+                <div className="absolute inset-0 flex items-center justify-center text-[#d4a574] pointer-events-none">
+                  <Play size={64} className="drop-shadow-[0_0_15px_rgba(212,165,116,0.5)] group-hover:scale-110 transition-transform duration-300" />
                 </div>
               </div>
               <div className="mt-6">

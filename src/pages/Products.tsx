@@ -5,16 +5,17 @@ import greenDrink from "../assets/GreenDrink.png";
 import redDrink from "../assets/RedDrink.jpeg"
 import blueDrink from "../assets/BlueDrink.jpeg"
 import coffeeDrink from "../assets/coffee.jpeg"
+import chocoHazelnut from "../assets/ChocoHazelnut.jpeg"
 import { Coffee, Droplet } from "lucide-react";
 import React from "react";
 
 const coffeeProducts = [
   {
-    name: "Classic Espresso",
-    description: "Rich, bold espresso shot made from premium Arabica beans",
-    price: "$3.50",
-    category: "Coffee",
-    image: "https://images.unsplash.com/photo-1645445644664-8f44112f334c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlc3ByZXNzbyUyMGNvZmZlZSUyMGN1cHxlbnwxfHx8fDE3NjM5ODA3MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    name: "Choco Hazelnut",
+    description: "Experience the perfect pairing of rich, creamy chocolate and the delicate, nutty flavor of roasted hazelnuts.",
+    price: "$5.25",
+    category: "Beverage",
+    image: chocoHazelnut,
     popular: true,
   },
   {
@@ -115,14 +116,6 @@ const beverageProducts = [
     price: "$4.50",
     category: "Beverage",
     image: coffeeDrink,
-    popular: true,
-  },
-  {
-    name: "Matcha Latte",
-    description: "Premium Japanese matcha whisked with steamed milk",
-    price: "$5.25",
-    category: "Beverage",
-    image: "https://images.unsplash.com/photo-1708572727896-117b5ea25a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXRjaGElMjBncmVlbiUyMHRlYSUyMGxhdHRlfGVufDF8fHx8MTc2Mzk3NzI1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     popular: true,
   },
   {

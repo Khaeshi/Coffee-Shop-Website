@@ -1,50 +1,48 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Mail, Linkedin } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import  JulianaGarcia  from "../assets/Juliana_Garcia.jpeg";
+import ReydenDelaCruz from "../assets/Reyden_Dela_Cruz.jpeg";
+import TristanVibal from "../assets/Tristan_Vibal.jpeg";
+import JamesCustodio from "../assets/James_Custodio.jpeg";
+import VincentYu from "../assets/Vincent_Yu.jpeg";
 import React from "react";
 
 const teamMembers = [
   {
-    name: "Sarah Johnson",
+    name: "JulianaGarcia",
     role: "Founder & Head Barista",
-    bio: "With over 15 years of coffee expertise, Sarah founded Gwampit's Coffee to share her passion for exceptional brews. She personally sources our beans and trains our team.",
+    bio: "May spontaneously quote balance sheets while steaming milk. She started with a dream, a tiny shop, and an espresso machine, and now she runs the whole damn roast.",
     email: "sarah@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1742119971773-57e0131095b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVtYmVyJTIwcG9ydHJhaXQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY0MDI2MzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: JulianaGarcia,
   },
   {
-    name: "Michael Chen",
-    role: "Operations Manager",
-    bio: "Michael ensures everything runs smoothly at Gwampit's. His attention to detail and customer service excellence make every visit memorable.",
+    name: "Tristan Vibal",
+    role: "Tech specialist",
+    bio: "Sensible, straightforward and easy to work with. Loves basketball and gets things done like cooper flag.",
     email: "michael@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1539021897569-06e9fa3c6bb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJpc3RhJTIwbWFraW5nJTIwY29mZmVlfGVufDF8fHx8MTc2NDAxNDc4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: TristanVibal,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Senior Barista",
-    bio: "Emily is a latte art champion and beverage innovator. She creates our seasonal specials and trains new baristas in the art of coffee making.",
+    name: "Vincent Yu",
+    role: "Barista & Marketing Specialist",
+    bio: "A poging 19 year old with charismatic personality who can cook and clean and makes you the best matcha every night.",
     email: "emily@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1742119971773-57e0131095b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVtYmVyJTIwcG9ydHJhaXQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY0MDI2MzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    image: VincentYu,
   },
   {
-    name: "James Thompson",
-    role: "Pastry Chef",
-    bio: "James brings his culinary expertise to our food menu, creating delicious pastries and snacks that perfectly complement our beverages.",
+    name: "Reyden Dela Cruz",
+    role: "Marketing Specialist",
+    bio: "Calm on the outside, overthinking on the inside, yet still getting things done beautifully.",
     email: "james@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1539021897569-06e9fa3c6bb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJpc3RhJTIwbWFraW5nJTIwY29mZmVlfGVufDF8fHx8MTc2NDAxNDc4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: ReydenDelaCruz,
   },
   {
-    name: "Aisha Patel",
-    role: "Marketing Director",
-    bio: "Aisha connects our brand with the community through creative campaigns and events. She's the voice behind our social media presence.",
+    name: "James Custodio",
+    role: "Content Strategist & Social Media Manager",
+    bio: "The one you call when you need things done the right way.",
     email: "aisha@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1742119971773-57e0131095b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVtYmVyJTIwcG9ydHJhaXQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzY0MDI2MzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    name: "David Kim",
-    role: "Sustainability Coordinator",
-    bio: "David ensures our coffee shop operates sustainably, from sourcing eco-friendly materials to implementing waste reduction programs.",
-    email: "david@gwampitscoffee.com",
-    image: "https://images.unsplash.com/photo-1539021897569-06e9fa3c6bb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJpc3RhJTIwbWFraW5nJTIwY29mZmVlfGVufDF8fHx8MTc2NDAxNDc4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: JamesCustodio,
   },
 ];
 
@@ -64,11 +62,11 @@ export function AboutUs() {
           {teamMembers.map((member, index) => (
             <Card key={index} className="bg-gradient-to-br from-[#1a1410] to-[#2d2419] border-[#d4a574]/30 hover:border-[#d4a574] hover:shadow-[0_0_30px_rgba(212,165,116,0.3)] transition-all duration-500 group hover:scale-105 hover:-translate-y-2">
               <CardContent className="p-6">
-                <div className="mb-4 overflow-hidden rounded-lg">
+                <div className="mb-4 h-[40vh] overflow-hidden rounded-lg">
                   <ImageWithFallback
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-[40vh] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <h3 className="text-[#d4a574] mb-2 group-hover:text-[#c49060] transition-colors duration-300">{member.name}</h3>
