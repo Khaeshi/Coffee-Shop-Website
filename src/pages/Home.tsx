@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { Coffee, Target, Eye, Award, Facebook } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
 import logo from "../assets/Favicon.png";
-import greenDrink from "../assets/GreenDrink.jpeg";
+import greenDrink from "../assets/GreenDrink.png";
 import frenchFriesBanner from "../assets/AdvertisementBanner.jpeg";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
