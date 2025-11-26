@@ -1,8 +1,5 @@
 
-  # Coffee Shop Website
-
-  This is a code bundle for Coffee Shop Website. The original project is available at github account: https://github.com/Khaeshi
-
+  # Gwampits Coffee Shop Website
 
   ## Description
 
@@ -22,7 +19,7 @@
   React.js, Figma, Tailwind
 
 
-  ## Installation (If applicable)
+  ## Installation 
 
   1.  Clone the repository: `git clone [repository URL]`
   2.  Install dependencies: `npm install`
