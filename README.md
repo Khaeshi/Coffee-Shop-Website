@@ -1,7 +1,7 @@
 
   # Gwampits Coffee Shop Website
   
-  <img width="1563" height="1563" alt="Untitled (Logo)" src="https://github.com/user-attachments/assets/c44932f0-7a2e-4212-a4f6-a6b32c08e097" />
+  <img width="350" height="350" alt="Untitled (Logo)" src="https://github.com/user-attachments/assets/c44932f0-7a2e-4212-a4f6-a6b32c08e097" />
 
   ## Description
 
